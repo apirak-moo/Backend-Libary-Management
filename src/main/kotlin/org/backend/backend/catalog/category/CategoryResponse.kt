@@ -1,5 +1,6 @@
 package org.backend.backend.catalog.category
 
+import java.time.Instant
 import java.util.UUID
 
 data class CategoryResponse(
@@ -8,5 +9,7 @@ data class CategoryResponse(
     val nameEn: String,
     val descriptionTh: String?,
     val descriptionEn: String?,
-    val status: Boolean
+    val status: Boolean,
+    val createdAt: Instant,
+    val updatedAt: Instant,
 )

@@ -7,7 +7,9 @@ fun Category.toCategory(): CategoryResponse {
         this.nameEn,
         this.descriptionTh,
         this.descriptionEn,
-        this.status
+        this.status,
+        this.createdAt,
+        this.updatedAt,
     )
 }
 
