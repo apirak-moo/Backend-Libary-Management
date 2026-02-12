@@ -9,14 +9,15 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer
 class CorsConfig {
 
     @Bean
-    fun coreConfigurer() = object : WebMvcConfigurer {
-        override fun addCorsMappings(registry: CorsRegistry?) {
-            registry
-                ?.addMapping("/**")
-                ?.allowedOrigins("*")
-                ?.allowedMethods("*")
-                ?.allowedHeaders("*")
-                ?.allowCredentials(true)
+    fun corsConfigurer(): WebMvcConfigurer {
+        return object : WebMvcConfigurer {
+            override fun addCorsMappings(registry: CorsRegistry) {
+                registry.addMapping("/**")
+                    .allowedOrigins("http://localhost:3000")
+                    .allowedMethods("*")
+                    .allowedHeaders("*")
+                    .allowCredentials(true)
+            }
         }
     }
 
