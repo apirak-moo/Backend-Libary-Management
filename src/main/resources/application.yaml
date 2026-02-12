@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: backend
+  threads:
+    virtual:
+      enabled: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pbru-libary
+    username: admin-pbru-libary
+    password: wOSK4N1Ff0vPMCZL66Tx
+  jpa:
+    hibernate.ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger
